@@ -2,6 +2,7 @@
 
 # Dependencies
 - stow
+- fzf
 
 # Dotfiles
 All files are relative to home
