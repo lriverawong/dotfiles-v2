@@ -1,0 +1,5 @@
+[user]
+	email = lriverawong@outlook.com
+	name = Luis Rivera-Wong
+[credential]
+	helper = cache --timeout=3600
