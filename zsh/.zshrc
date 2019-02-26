@@ -100,7 +100,9 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH=$(go env GOPATH)
 
 # anaconda
-export PATH="/work/opt/anaconda3/bin:$PATH"
+# export PATH="/work/opt/anaconda3/bin:$PATH"
+. ~/opt/anaconda3/etc/profile.d/conda.sh
+conda activate base
 
 # alias
 alias vim="nvim"

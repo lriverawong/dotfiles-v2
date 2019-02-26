@@ -118,7 +118,17 @@ set termguicolors
 hi LineNr ctermbg=NONE guibg=NONE
 
 " fzf
-nmap <Leader>f :FZF<CR>
+  nmap <Leader>f :FZF<CR>
+  ":nnoremap <C-p> :FZF<CR>
 
 " vim airline
-let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#enabled = 1
+
+" buffer switching
+  ":nnoremap <Tab> :bnext<CR>
+  nmap <Leader>n :bnext<CR>
+  ":nnoremap <S-Tab> :bprevious<CR>
+  nmap <Leader>p :bprevious<CR>
+  " delete current buffer
+  nmap <Leader>q :bp\|bd #<CR>
+

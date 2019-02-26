@@ -191,10 +191,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 5 ppt
-        bindsym k resize grow height 10 px or 5 ppt
-        bindsym l resize shrink height 10 px or 5 ppt
-        bindsym semicolon resize grow width 10 px or 5 ppt
+        bindsym h resize shrink width 10 px or 5 ppt
+        bindsym j resize grow height 10 px or 5 ppt
+        bindsym k resize shrink height 10 px or 5 ppt
+        bindsym l resize grow width 10 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 5 ppt
@@ -250,7 +250,7 @@ bindsym $mod+Shift+d exec dolphin
 bindsym $mod+Shift+f exec konsole -e ranger
 
 # Runs the key remapping scripts
-exec --no-startup-id remap
+exec --no-startup-id bash ~/Scripts/remap.sh
 
 # fix urgent windows
 force_display_urgency_hint 0 ms
