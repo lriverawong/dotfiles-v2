@@ -97,12 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # GoPath
-export GOPATH=$(go env GOPATH)
+#export GOPATH=$(go env GOPATH)
 
 # anaconda
 # export PATH="/work/opt/anaconda3/bin:$PATH"
-. ~/opt/anaconda3/etc/profile.d/conda.sh
-conda activate base
+#. ~/opt/anaconda3/etc/profile.d/conda.sh
+#conda activate base
 
 # alias
 alias vim="nvim"
