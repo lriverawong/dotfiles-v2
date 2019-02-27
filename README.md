@@ -3,6 +3,10 @@
 ## Dependencies
 - stow
 - fzf
+- feh
+- rofi/dmenu
+- playerctl
+- i3-gaps
 
 ## Dotfiles
 All files are relative to home
