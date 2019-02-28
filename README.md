@@ -7,6 +7,8 @@
 - rofi/dmenu
 - playerctl
 - i3-gaps
+- exuberant-ctags
+- xcape
 
 ## Dotfiles
 All files are relative to home
@@ -21,7 +23,7 @@ All files are relative to home
 - remap script for caps lock to escape key (in i3 config but actual script in ~/Scripts linked to ~/bin)
 
 ## Insert dotfiles
-`stow -v *`
+`sh stow.sh`
 
 ## Delete dotfiles
 `stow -D <dirname>`
