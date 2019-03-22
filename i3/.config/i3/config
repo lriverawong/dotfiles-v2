@@ -45,7 +45,8 @@ set $transparent #00000000
 
 # border colours
 #                       BORDER		BACKGROUND	TEXT		INDICATOR   CHILD_BORDER
-client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
+client.focused		$darkgreen		$darkgreen		$white	$darkmagenta		$darkblue
+#client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
 client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
 client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
 client.urgent		$darkred	$darkred	$black		$darkred		$darkred
