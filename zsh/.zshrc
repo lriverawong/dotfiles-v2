@@ -97,12 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # GoPath
-export GOPATH=$(go env GOPATH)
+# export GOPATH=$(go env GOPATH)
 
 # anaconda
 # export PATH="/work/opt/anaconda3/bin:$PATH"
-. ~/opt/anaconda3/etc/profile.d/conda.sh
-conda activate base
+#. ~/opt/anaconda3/etc/profile.d/conda.sh
+#conda activate base
 
 # alias
 alias vim="nvim"
@@ -110,15 +110,15 @@ alias vim="nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ssh-key adding
-if [ -f ~/.ssh/agent.env ] ; then
-    . ~/.ssh/agent.env > /dev/null
-    if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
-        echo "Stale agent file found. Spawning new agent… "
-        eval `ssh-agent | tee ~/.ssh/agent.env`
-        ssh-add
-    fi
-else
-    echo "Starting ssh-agent"
-    eval `ssh-agent | tee ~/.ssh/agent.env`
-    ssh-add
-fi
+# if [ -f ~/.ssh/agent.env ] ; then
+#     . ~/.ssh/agent.env > /dev/null
+#     if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
+#         echo "Stale agent file found. Spawning new agent… "
+#         eval `ssh-agent | tee ~/.ssh/agent.env`
+#         ssh-add
+#     fi
+# else
+#     echo "Starting ssh-agent"
+#     eval `ssh-agent | tee ~/.ssh/agent.env`
+#     ssh-add
+# fi
