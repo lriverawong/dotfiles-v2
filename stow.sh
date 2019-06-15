@@ -14,6 +14,6 @@ stow -v profile
 stow -v ranger
 stow -v vim
 stow -v X
-stow -v zsh
+#stow -v zsh
 
 echo "=== Done linking all dotfiles ==="
