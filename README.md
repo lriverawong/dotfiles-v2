@@ -30,14 +30,9 @@ All files are relative to home
 
 ## prezto
 - https://github.com/sorin-ionescu/prezto/
-```
-zsh
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
+## Complete setup
+`sh setup.sh`
 
-chsh -s /bin/zsh
-```
+## Complete removal
+`sh remove.sh`
