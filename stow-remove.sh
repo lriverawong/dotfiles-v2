@@ -4,16 +4,16 @@
 
 echo "=== Starting to link all dotfiles ==="
 
-stow -v compton
-stow -v github-config
+stow -Dv compton
+stow -Dv github-config
 # stow -v i3
-stow -v konsole
-stow -v neovim
+stow -Dv konsole
+stow -Dv neovim
 # stow -v plasma-i3-replace
-stow -v profile
-stow -v ranger
-stow -v vim
+stow -Dv profile
+stow -Dv ranger
+stow -Dv vim
 #stow -v X
-stow -v zsh
+stow -Dv zsh
 
 echo "=== Done linking all dotfiles ==="
