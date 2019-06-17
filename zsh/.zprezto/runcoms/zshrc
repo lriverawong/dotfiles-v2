@@ -11,3 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+alias vim="nvim"
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
