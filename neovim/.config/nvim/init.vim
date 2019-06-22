@@ -115,7 +115,7 @@ call plug#end()
 
 " colorscheme
 colorscheme space-vim-dark
-set termguicolors
+"set termguicolors
 hi LineNr ctermbg=NONE guibg=NONE
 
 " fzf
