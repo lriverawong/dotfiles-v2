@@ -15,3 +15,21 @@ fi
 alias vim="nvim"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir vcs)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# ls after changing directory
+chpwd() {
+  ls -lah
+}
+
+# add gcloud completion
+source /usr/share/google-cloud-sdk/completion.zsh.inc
+
+# add custom_completions to fpath
+fpath=(~/.zprezto/custom_completions $fpath)
+
+# kubectl
+source <(kubectl completion zsh)
+
+autoload -U compinit && compinit
