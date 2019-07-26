@@ -6,6 +6,7 @@ echo "=== Starting to link all dotfiles ==="
 
 stow -v compton
 stow -v github-config
+stow -v glances
 # stow -v i3
 stow -v konsole
 stow -v neovim
