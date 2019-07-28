@@ -34,7 +34,7 @@ Plug 'vim-syntastic/syntastic'
 "Plug 'sts10/vim-pink-moon'
 Plug 'liuchengxu/space-vim-dark'
 " If installed using git
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
