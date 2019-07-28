@@ -25,14 +25,15 @@ call plug#begin('~/.config/nvim/plugged')
 "call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
+"Plug 'PotatoesMaster/i3-vim-syntax'
 "Plug 'xolox/vim-easytags'
 "Plug 'xolox/vim-misc'
 "Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-syntastic/syntastic'
 "Plug 'sts10/vim-pink-moon'
-Plug 'liuchengxu/space-vim-dark'
+"Plug 'liuchengxu/space-vim-dark'
+Plug 'connorholyday/vim-snazzy'
 " If installed using git
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
@@ -114,7 +115,8 @@ call plug#end()
   let g:syntastic_check_on_wq = 0
 
 " colorscheme
-colorscheme space-vim-dark
+" colorscheme space-vim-dark
+colorscheme snazzy
 "set termguicolors
 hi LineNr ctermbg=NONE guibg=NONE
 
