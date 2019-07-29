@@ -49,7 +49,8 @@ path=(
 autoload -U promptinit; promptinit
 prompt pure
 
-# autoload -U compinit && compinit
+# loading completions(?)
+autoload -U compinit && compinit
 
 # ---------------------
 # User configuration
