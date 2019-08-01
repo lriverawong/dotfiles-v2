@@ -52,6 +52,12 @@ prompt pure
 # loading completions(?)
 autoload -U compinit && compinit
 
+# helm aliases
+alias hh="helm tiller run helm"
+alias hr="helm tiller run"
+alias ht="helm tiller start"
+alias hts="helm tiller stop"
+
 # ---------------------
 # User configuration
 
@@ -132,3 +138,8 @@ autoload -U compinit && compinit
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+
+# NVM
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
