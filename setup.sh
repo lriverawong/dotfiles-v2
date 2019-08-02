@@ -22,8 +22,8 @@ if [ ! -d ~/.zfunctions ]; then
   mkdir ~/.zfunctions
 fi
 # link
-ln -s "$PWD/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
-ln -s "$PWD/async.zsh" "$HOME/.zfunctions/async"
+ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
+ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
 
 # run stow setup
 sh ./stow.sh
