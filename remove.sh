@@ -6,7 +6,7 @@
 sh ./stow-remove.sh
 
 # delete .zfunctions
-rm -rf ~/.zfunctions
+rm -rf $HOME/.zfunctions
 
 # delete oh-my-zsh dir
-rm -rf ~/.oh-my-zsh
+rm -rf $HOME/.oh-my-zsh
