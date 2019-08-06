@@ -1,25 +1,15 @@
 # Luis Rivera-Wong Dotfiles
 
 ## Dependencies
+- Manjaro i3 (it's provided tools, which I will list later)
 - stow
-- fzf
-- feh
 - rofi/dmenu
-- playerctl
 - i3-gaps
-- exuberant-ctags
-- xcape
 
 ## Dotfiles
 All files are relative to home
 
-- ~/.config/nvim/
-- zsh config
-- i3 config
-- compton config
-- plasma workspace for i3 wm replacement
-- .profile
-- base vimrc
+Note
 - remap script for caps lock to escape key (in i3 config but actual script in ~/Scripts linked to ~/bin)
 
 ## Insert dotfiles
@@ -27,9 +17,6 @@ All files are relative to home
 
 ## Delete dotfiles
 `stow -D <dirname>`
-
-## prezto
-- https://github.com/sorin-ionescu/prezto/
 
 ## Complete setup
 `sh setup.sh`

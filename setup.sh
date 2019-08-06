@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Setup for ubuntu
+# Setup for ubuntu/arch
 
 # install oh-my-zsh separately
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
