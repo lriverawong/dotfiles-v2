@@ -26,7 +26,7 @@ chpwd() {
 }
 
 # add gcloud completion
-source /usr/share/google-cloud-sdk/completion.zsh.inc
+source /opt/google-cloud-sdk/completion.zsh.inc
 
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
