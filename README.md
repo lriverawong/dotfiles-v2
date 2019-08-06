@@ -23,3 +23,7 @@ Note
 
 ## Complete removal
 `sh remove.sh`
+
+## To-DO
+
+- ssh-agent autostart

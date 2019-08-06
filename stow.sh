@@ -14,6 +14,7 @@ stow -v neovim
 # stow -v plasma-i3-replace
 stow -v profile
 stow -v ranger
+stow -v rofi
 stow -v tmux
 stow -v vim
 stow -v X
