@@ -7,6 +7,16 @@ set $mod Mod4
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
+# workspaces per screen
+workspace 1 output DP1
+workspace 2 output DP1
+workspace 3 output DP1
+workspace 4 output DP1
+workspace 5 output HDMI2
+workspace 6 output HDMI2
+workspace 7 output HDMI2
+workspace 8 output eDP1
+
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 new_window pixel 1
 new_float normal
