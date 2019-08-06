@@ -15,6 +15,7 @@ stow -v neovim
 stow -v profile
 stow -v ranger
 stow -v rofi
+stow -v scripts
 stow -v tmux
 stow -v vim
 stow -v X
