@@ -10,6 +10,8 @@
     - dunst
 - stow
 - rofi
+- playerctl
+- keychain
 
 ## Dotfiles
 All files are relative to home
