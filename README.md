@@ -2,9 +2,14 @@
 
 ## Dependencies
 - Manjaro i3 (it's provided tools, which I will list later)
+    - URxvt
+    - conky
+    - compton
+    - i3-gaps
+    - demnu
+    - dunst
 - stow
-- rofi/dmenu
-- i3-gaps
+- rofi
 
 ## Dotfiles
 All files are relative to home
