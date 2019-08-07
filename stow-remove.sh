@@ -9,7 +9,8 @@ stow -Dv compton
 stow -Dv conky
 stow -Dv github-config
 stow -Dv glances
-stow -v i3
+stow -Dv i3
+stow -Dv i3status
 stow -Dv konsole
 stow -Dv neovim
 # stow -v plasma-i3-replace
