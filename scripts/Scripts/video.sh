@@ -13,7 +13,7 @@ if xrandr | grep -w "$ecobee connected"; then
     i3-msg "workspace 6, move workspace to output HDMI2"
     i3-msg "workspace 7, move workspace to output HDMI2"
     i3-msg "workspace 8, move workspace to output eDP1"
-    nitrogen --restore; sleep 1; pkill compton; compton -b
+    exec --no-startup-id nitrogen --restore; sleep 1; pkill compton; compton -b
 elif xrandr | grep -w "$ecobee disconnected"  && xrandr | grep -w "HDMI2 connected"; then
     xrandr --output eDP1 --mode 1600x900 --pos 0x90 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --primary --mode 1920x1080 --pos 1600x0 --rotate normal --output VIRTUAL1 --off
     i3-msg "workspace 1, move workspace to output HDMI2"
@@ -24,7 +24,7 @@ elif xrandr | grep -w "$ecobee disconnected"  && xrandr | grep -w "HDMI2 connect
     i3-msg "workspace 6, move workspace to output HDMI2"
     i3-msg "workspace 7, move workspace to output HDMI2"
     i3-msg "workspace 8, move workspace to output eDP1"
-    nitrogen --restore; sleep 1; pkill compton; compton -b
+    exec --no-startup-id nitrogen --restore; sleep 1; pkill compton; compton -b
 else
     # Solo laptop monitor
     xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x559 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off
@@ -36,5 +36,5 @@ else
     i3-msg "workspace 6, move workspace to output eDP1"
     i3-msg "workspace 7, move workspace to output eDP1"
     i3-msg "workspace 8, move workspace to output eDP1"
-    nitrogen --restore; sleep 1; pkill compton; compton -b
+    exec --no-startup-id nitrogen --restore; sleep 1; pkill compton; compton -b
 fi
