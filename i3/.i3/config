@@ -27,7 +27,7 @@ hide_edge_borders none
 # change borders
 bindsym $mod+u border none
 bindsym $mod+y border pixel 5
-bindsym $mod+n border normal
+# bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -92,6 +92,12 @@ bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 # bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+# Notifications
+# pause notification
+bindsym $mod+n --release exec "notify-send -t 2000 'notifications paused'; sleep 2; exec killall -SIGUSR1 dunst"
+# resume notications
+bindsym $mod+Shift+n --release exec "killall -SIGUSR2 dunst; exec notify-send -u low 'notifications resumed'"
 
 # focus_follows_mouse no
 
