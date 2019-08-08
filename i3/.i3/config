@@ -18,7 +18,7 @@ workspace 7 output HDMI2 primary
 workspace 8 output eDP1 primary
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 1
+new_window pixel 5
 new_float normal
 
 # Hide borders
@@ -26,7 +26,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 5
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -125,8 +125,8 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+# bindsym $mod+h split h;exec notify-send 'tile horizontally'
+# bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
@@ -363,7 +363,7 @@ bar {
         statusline #F9FAF9
         separator  #454947
 
-#                      border  backgr. text
+#                          border  backgr. text
         focused_workspace  #F9FAF9 #16a085 #292F34
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5
@@ -377,13 +377,22 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  client.focused          #1ABC9C #1ABC9C #ffffff #FDF6E3
+  client.focused_inactive #2F3D44 #2F3D44 #ffffff #454948
+  client.unfocused        #2F3D44 #2F3D44 #ffffff #454948
+  client.urgent           #CB4B16 #FDF6E3 #ffffff #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
+
+# Default Maia Theme
+# class                   border  backgr. text    indic.   child_border
+#   client.focused          #556064 #556064 #80FFF9 #FDF6E3
+#   client.focused          #1ABC9C #1ABC9C #80FFF9 #FDF6E3
+#   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+#   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+#   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+#   client.placeholder      #000000 #0c0c0c #ffffff #000000
 
 #############################
 ### settings for i3-gaps: ###
