@@ -59,7 +59,10 @@ alias ht="helm tiller start"
 alias hts="helm tiller stop"
 
 # keychain - adding ssh keys
-eval $(keychain --eval --quiet --noask id_rsa_ecobee)
+eval $(keychain --eval --quiet id_rsa_ecobee)
+
+# add direnv
+eval "$(direnv hook zsh)"
 
 # ---------------------
 # User configuration

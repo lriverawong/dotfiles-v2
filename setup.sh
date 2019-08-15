@@ -27,8 +27,8 @@ ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
 
 # install kubectx
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kunectx
-sudo ln -s /opt/kubectx/kubens /usr/local/bin/kunens
+sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
+sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
 # install terraform v.0.11.14
 sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip -P /tmp/
