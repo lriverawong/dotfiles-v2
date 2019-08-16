@@ -38,8 +38,13 @@ fpath=(
 # kubectl
 source <(kubectl completion zsh)
 
+#go
+export GOPATH=$HOME/go
+
 # Set the list of directories that Zsh searches for programs.
 path=(
+  ~/bin
+  $GOPATH/bin
   ~/.local/bin
   /snap/bin/
   $path

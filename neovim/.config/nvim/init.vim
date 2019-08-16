@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
 "call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/goyo.vim'
-"Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'PotatoesMaster/i3-vim-syntax'
 "Plug 'xolox/vim-easytags'
 "Plug 'xolox/vim-misc'
 "Plug 'majutsushi/tagbar'

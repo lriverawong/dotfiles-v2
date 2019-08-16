@@ -8,6 +8,7 @@
     - i3-gaps
     - demnu
     - dunst
+    - xorg-xbacklight
 - stow
 - rofi
 - playerctl
