@@ -9,6 +9,8 @@
     - demnu
     - dunst
     - xorg-xbacklight
+    - gestures
+    - libinput-gestures (and start it)
 - stow
 - rofi
 - playerctl

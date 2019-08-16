@@ -13,6 +13,7 @@ stow -Dv glances
 stow -Dv i3
 stow -Dv i3status
 stow -Dv konsole
+stow -Dv libinput-gestures
 stow -Dv neovim
 # stow -v plasma-i3-replace
 stow -Dv profile
