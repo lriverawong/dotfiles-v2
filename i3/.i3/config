@@ -304,8 +304,8 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Autostart applications
+# exec_always = restart always with i3wm restarts
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id /home/luis/Scripts/touchpad-settings.sh
 exec --no-startup-id /home/luis/Scripts/monitor.sh
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 # exec --no-startup-id manjaro-hello
@@ -317,11 +317,13 @@ exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id /home/luis/Scripts/start_conky_green
-exec --no-startup-id /home/luis/Scripts/remap.sh
 exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id bash ~/Scripts/touchpad-settings.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id /usr/bin/libinput-gestures
+exec_always --no-startup-id bash ~/Scripts/remap.sh
+exec_always --no-startup-id bash ~/Scripts/start_conky_green.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
