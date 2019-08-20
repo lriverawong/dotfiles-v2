@@ -214,7 +214,8 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-assign [class="Spotify"] $ws8
+assign [class="Slack"] $ws5
+for_window [class="Spotify"] move to workspace $ws8
 # assign [class="Thunderbird"] $ws1
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
@@ -324,7 +325,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id /usr/bin/libinput-gestures
 exec_always --no-startup-id bash ~/Scripts/remap.sh
-exec_always --no-startup-id bash ~/Scripts/start_conky_green.sh
+exec_always --no-startup-id pkill conky; bash ~/Scripts/start_conky_green.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
