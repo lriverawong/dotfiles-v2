@@ -31,7 +31,7 @@ elif xrandr | grep -w "$ecobee disconnected"  && xrandr | grep -w "HDMI2 connect
     exec nitrogen --restore; sleep 1; compton -b;
 else
     # Solo laptop monitor
-    xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x559 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off
+    xrandr --output eDP1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off
     i3-msg "workspace 1, move workspace to output eDP1"
     i3-msg "workspace 2, move workspace to output eDP1"
     i3-msg "workspace 3, move workspace to output eDP1"
