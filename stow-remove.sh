@@ -4,18 +4,19 @@
 
 echo "=== Starting to link all dotfiles ==="
 
+stow -Dv conky
 stow -Dv compton
 stow -Dv github-config
 stow -Dv glances
-# stow -v i3
 stow -Dv konsole
+stow -Dv libinput-gestures
 stow -Dv neovim
-# stow -v plasma-i3-replace
 stow -Dv profile
 stow -Dv ranger
+stow -Dv scripts
 stow -Dv tmux
 stow -Dv vim
-#stow -v X
-stow -Dv zsh
+stow -Dv X
+stow -Dv zshsh
 
 echo "=== Done linking all dotfiles ==="
