@@ -1,0 +1,6 @@
+google-chrome
+slack-desktop
+visual-studio-code
+spotify
+nordvpn
+simplenote

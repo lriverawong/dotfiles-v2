@@ -28,11 +28,18 @@ All files are relative to home
 ## Delete dotfiles
 `stow -D <dirname>`
 
-## prezto
-- https://github.com/sorin-ionescu/prezto/
 
 ## Complete setup
 `sh setup.sh`
 
 ## Complete removal
 `sh remove.sh`
+
+## Package Install
+```
+sudo pacman -S - < packages/arch/pacman-pkglist.txt
+```
+```
+sudo yay -S - < packages/arch/aur-pkglist.txt
+```
+```
