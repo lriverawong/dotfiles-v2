@@ -31,18 +31,22 @@ sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
 # install terraform v.0.11.14
-sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip -P /tmp/
-sudo unzip /tmp/terraform_0.11.14_linux_amd64.zip
-sudo mkdir -p /opt/terraform
-sudo mv /tmp/terraform /opt/terraform/
-sudo ln -s /opt/terraform/terraform /usr/local/bin/terraform
+popd /tmp
+  sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip -P /tmp/
+  sudo unzip /tmp/terraform_0.11.14_linux_amd64.zip
+  sudo mkdir -p /opt/terraform
+  sudo mv /tmp/terraform /opt/terraform/
+  sudo ln -sf /opt/terraform/terraform /usr/local/bin/terraform
+popd
 
 # install helm
-sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
-sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz
-sudo mkdir -p /opt/helm
-sudo mv /tmp/linux-amd64/helm /opt/helm
-sudo ln -sf /opt/helm/helm /usr/local/bin/helm
+pushd /tmp
+  sudo wget https://get.helm.sh/helm-v1.14.3-linux-amd64.tar.gz -P /tmp/
+  sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz 
+  sudo mkdir -p /opt/helm
+  sudo mv /tmp/linux-amd64/helm /opt/helm
+  sudo ln -sf /opt/helm/helm /usr/local/bin/helm
+popd
 # setup helm
 helm init --client-only
 helm plugin install https://github.com/rimusz/helm-tiller
