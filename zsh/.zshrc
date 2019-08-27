@@ -26,7 +26,7 @@ chpwd() {
 }
 
 # add gcloud completion
-source /usr/share/google-cloud-sdk/completion.zsh.inc
+source /opt/google-cloud-sdk/completion.zsh.inc
 
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
@@ -57,9 +57,6 @@ alias hh="helm tiller run helm"
 alias hr="helm tiller run"
 alias ht="helm tiller start"
 alias hts="helm tiller stop"
-
-# keychain - adding ssh keys
-eval $(keychain --eval --quiet id_rsa_ecobee)
 
 # add direnv
 eval "$(direnv hook zsh)"
