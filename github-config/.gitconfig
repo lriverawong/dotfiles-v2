@@ -3,3 +3,5 @@
 	name = Luis Rivera-Wong
 [credential]
 	helper = cache --timeout=3600
+[diff "sopsdiffer"]
+	textconv = sops -d
