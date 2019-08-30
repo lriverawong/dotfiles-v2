@@ -42,4 +42,21 @@ sudo pacman -S - < packages/arch/pacman-pkglist.txt
 ```
 sudo yay -S - < packages/arch/aur-pkglist.txt
 ```
-```
+
+## Hibernation - Manjaro
+- Check kernel version
+  ```sh
+  uname -r
+  ```
+- Make sure it matches
+  ```sh
+  /etc/mkinitcpio.d/<kernel-version>
+  ```
+- Make sure the `resume` hook is after the `udev` hook in `/etc/mkinitcpio.conf` and if not then add it in
+  ```
+  HOOKS="base udev autodetect modconf block keyboard keymap resume filesystems"
+  ```
+- Regenerate initramfs for the current kernel version (must be redone every major kernel update)
+  ```sh
+  sudo mkinitcpio -p linux<kernelversion>
+  ```

@@ -20,5 +20,6 @@ sysstat
 trizen
 wmctrl
 xclip
+xcape
 xdotool
 yay
