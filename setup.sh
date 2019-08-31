@@ -31,7 +31,7 @@ sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
 # install terraform v.0.11.14
-popd /tmp
+pushd /tmp
   sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip -P /tmp/
   sudo unzip /tmp/terraform_0.11.14_linux_amd64.zip
   sudo mkdir -p /opt/terraform
@@ -41,7 +41,7 @@ popd
 
 # install helm
 pushd /tmp
-  sudo wget https://get.helm.sh/helm-v1.14.3-linux-amd64.tar.gz -P /tmp/
+  sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
   sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz 
   sudo mkdir -p /opt/helm
   sudo mv /tmp/linux-amd64/helm /opt/helm
