@@ -13,6 +13,9 @@ stow -Dv neovim
 stow -Dv profile
 stow -Dv ranger
 stow -Dv scripts
+stow -Dv ssh-agent
+stow -Dv ssh-add
+stow -Dv ssh-askpass
 stow -Dv tmux
 stow -Dv vim
 stow -Dv X
