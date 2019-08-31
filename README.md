@@ -1,5 +1,7 @@
 # Luis Rivera-Wong Dotfiles
 
+Manjaro XFCE
+
 ## Dependencies
 - stow
 - fzf
