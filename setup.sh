@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Setup for ubuntu/arch
+# Setup for arch based systems
 if [ ! -d ~/.oh-my-zsh ]; then
     # install oh-my-zsh separately
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
@@ -20,7 +20,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
     if [ ! -d ~/.zfunctions ]; then
         mkdir ~/.zfunctions
     fi
-    
+
     # link
     ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
     ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
@@ -43,7 +43,7 @@ popd
 # install helm
 pushd /tmp
   sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
-  sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz 
+  sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz
   sudo mkdir -p /opt/helm
   sudo mv /tmp/linux-amd64/helm /opt/helm
   sudo ln -sf /opt/helm/helm /usr/local/bin/helm
@@ -54,3 +54,13 @@ helm plugin install https://github.com/rimusz/helm-tiller
 
 # run stow setup
 sh ./stow.sh
+
+# install packages
+sudo pacman -S --noconfirm - < ./packages/arch/pacman-pkglist.txt
+
+# add user to input group for touchpad gestures
+sudo gpasswd -a $USER input
+
+# install AUR packages
+yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
+
