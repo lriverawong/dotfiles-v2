@@ -63,8 +63,18 @@ alias hr="helm tiller run"
 alias ht="helm tiller start"
 alias hts="helm tiller stop"
 
+# docker aliases
+alias dc="docker-compose"
+alias dcd="docker-compose down"
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
+alias dcud="docker-compose up -d"
+
 # add direnv
 eval "$(direnv hook zsh)"
+
+# default editor
+export EDITOR="nvim"
 
 # ---------------------
 # User configuration
