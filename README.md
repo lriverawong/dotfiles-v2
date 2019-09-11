@@ -67,3 +67,9 @@ yay -S - < packages/arch/aur-pkglist.txt
     - Go to the `Global Shorcuts` application and import `./kde-shortcuts/kwin-global-shortcuts` 
 - Custom Shortcuts Group
     - Go to the `Custom Shortcuts` application and import `./kde-shortcuts/custom-shortcuts`
+
+## SSH-Agent
+Check the status after install
+```
+systemctl --user status ssh-agent.service
+```

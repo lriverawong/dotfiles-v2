@@ -70,3 +70,9 @@ sudo gpasswd -a $USER docker
 # install AUR packages
 yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
 
+# start ssh-agent
+systemctl --user start ssh-agent.service
+systemctl --user enable ssh-agent.service
+
+# done
+echo 'Done setup!'

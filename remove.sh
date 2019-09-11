@@ -22,3 +22,16 @@ sudo rm -rf /opt/terraform
 sudo rm /usr/local/bin/helm
 sudo rm -rf /opt/helm
 rm -rf ~/.helm
+
+# delete user from input group for touchpad gestures
+sudo gpasswd -d $USER input
+
+# delte user from docker group
+sudo gpasswd -d $USER docker
+
+# remove ssh agent
+systemctl --user disable ssh-agent.service
+systemctl --user stop ssh-agent.service
+
+# done
+echo "Done removal script!"
