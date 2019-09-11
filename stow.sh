@@ -5,6 +5,7 @@
 echo "=== Starting to link all dotfiles ==="
 
 stow -v conky
+stow -v docker
 stow -v github-config
 stow -v glances
 stow -v konsole
@@ -13,6 +14,9 @@ stow -v neovim
 stow -v profile
 stow -v ranger
 stow -v scripts
+stow -v ssh-agent
+stow -v ssh-add
+stow -v ssh-askpass
 stow -v tmux
 stow -v vim
 stow -v X

@@ -1,10 +1,8 @@
 chromium
-direnv
 dnsutils
 firefox
 gestures
 go
-google-cloud-sdk
 htop
 kubectl
 libinput-gestures

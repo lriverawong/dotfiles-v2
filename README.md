@@ -1,6 +1,10 @@
 # Luis Rivera-Wong Dotfiles
 
+<<<<<<< HEAD
 Manjaro XFCE
+=======
+Manjaro KDE
+>>>>>>> ecobee-kde
 
 ## Dependencies
 - stow
@@ -42,7 +46,7 @@ All files are relative to home
 sudo pacman -S - < packages/arch/pacman-pkglist.txt
 ```
 ```
-sudo yay -S - < packages/arch/aur-pkglist.txt
+yay -S - < packages/arch/aur-pkglist.txt
 ```
 
 ## Hibernation - Manjaro

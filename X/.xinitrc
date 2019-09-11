@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # ~/.xinitrc
 #
@@ -9,7 +9,7 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-SESSION=${1:-xfce}
+DEFAULT_SESSION=startkde
 
 # merge in defaults and keymaps
 
@@ -40,7 +40,7 @@ fi
 
 get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
-	case "$SESSION" in
+	case $1 in
 		awesome) dbus_args+=(awesome) ;;
 		bspwm) dbus_args+=(bspwm-session) ;;
 		budgie) dbus_args+=(budgie-desktop) ;;
@@ -57,7 +57,7 @@ get_session(){
 		mate) dbus_args+=(mate-session) ;;
 		xfce) dbus_args+=(xfce4-session) ;;
 		openbox) dbus_args+=(openbox-session) ;;
-		*) dbus_args+=("$SESSION") ;;
+		*) dbus_args+=($DEFAULT_SESSION) ;;
 	esac
 
 	echo "dbus-launch ${dbus_args[*]}"

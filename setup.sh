@@ -1,29 +1,30 @@
 #!/bin/zsh
 
-# Setup for ubuntu/arch
+# Setup for arch based systems
+if [ ! -d ~/.oh-my-zsh ]; then
+    # install oh-my-zsh separately
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+    # change default shell
+    chsh -s `which zsh` luis
 
-# install oh-my-zsh separately
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+    # --- plugins ---
+    # zsh syntax highlighting
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    # zsh history substring search
+    git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
-# change default shell
-chsh -s `which zsh` luis
+    # --- custom themes ---
+    # -- pure zsh theme --
+    git clone https://github.com/sindresorhus/pure.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/pure
+    # check for existence of zfunctions directory
+    if [ ! -d ~/.zfunctions ]; then
+        mkdir ~/.zfunctions
+    fi
 
-# --- plugins ---
-# zsh syntax highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# zsh history substring search
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
-
-# --- custom themes ---
-# -- pure zsh theme --
-git clone https://github.com/sindresorhus/pure.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/pure
-# check for existence of zfunctions directory
-if [ ! -d ~/.zfunctions ]; then
-  mkdir ~/.zfunctions
+    # link
+    ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
+    ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
 fi
-# link
-ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
-ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
 
 # install kubectx
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
@@ -42,7 +43,11 @@ popd
 # install helm
 pushd /tmp
   sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
+<<<<<<< HEAD
   sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz 
+=======
+  sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz
+>>>>>>> ecobee-kde
   sudo mkdir -p /opt/helm
   sudo mv /tmp/linux-amd64/helm /opt/helm
   sudo ln -sf /opt/helm/helm /usr/local/bin/helm
@@ -53,3 +58,13 @@ helm plugin install https://github.com/rimusz/helm-tiller
 
 # run stow setup
 sh ./stow.sh
+
+# install packages
+sudo pacman -S --noconfirm - < ./packages/arch/pacman-pkglist.txt
+
+# add user to input group for touchpad gestures
+sudo gpasswd -a $USER input
+
+# install AUR packages
+yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
+

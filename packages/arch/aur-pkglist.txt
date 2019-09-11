@@ -1,7 +1,8 @@
+direnv
 google-chrome
+google-cloud-sdk
 nordvpn
 simplenote
 slack-desktop
 sops
-spotify
-visual-studio-code
+visual-studio-code-bin
