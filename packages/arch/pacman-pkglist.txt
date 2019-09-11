@@ -1,4 +1,6 @@
 chromium
+docker
+docker-compose
 dnsutils
 firefox
 gestures

@@ -43,11 +43,7 @@ popd
 # install helm
 pushd /tmp
   sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
-<<<<<<< HEAD
-  sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz 
-=======
   sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz
->>>>>>> ecobee-kde
   sudo mkdir -p /opt/helm
   sudo mv /tmp/linux-amd64/helm /opt/helm
   sudo ln -sf /opt/helm/helm /usr/local/bin/helm
@@ -64,6 +60,9 @@ sudo pacman -S --noconfirm - < ./packages/arch/pacman-pkglist.txt
 
 # add user to input group for touchpad gestures
 sudo gpasswd -a $USER input
+
+# add user to docker group
+sudo gpasswd -a $USER docker
 
 # install AUR packages
 yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt

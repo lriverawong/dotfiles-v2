@@ -1,10 +1,6 @@
 # Luis Rivera-Wong Dotfiles
 
-<<<<<<< HEAD
-Manjaro XFCE
-=======
 Manjaro KDE
->>>>>>> ecobee-kde
 
 ## Dependencies
 - stow

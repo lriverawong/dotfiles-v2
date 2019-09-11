@@ -1,7 +1,5 @@
 [user]
-	email = luis.r@ecobee.com
+	email = lriverawong@outlook.com
 	name = Luis Rivera-Wong
 [credential]
 	helper = cache --timeout=3600
-[diff "sopsdiffer"]
-	textconv = sops -d
