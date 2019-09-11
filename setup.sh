@@ -56,6 +56,7 @@ helm init --client-only
 helm plugin install https://github.com/rimusz/helm-tiller
 
 # run stow setup
+sudo pacman -S stow --noconfirm
 sh ./stow.sh
 
 # install packages
