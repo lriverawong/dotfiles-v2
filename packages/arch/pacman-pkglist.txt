@@ -15,9 +15,11 @@ piper
 python-neovim
 python-pip
 redshift
+screen
 stow
 sysstat
 trizen
+tmux
 wmctrl
 xclip
 xcape
