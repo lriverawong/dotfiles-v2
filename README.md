@@ -73,3 +73,6 @@ Check the status after install
 ```
 systemctl --user status ssh-agent.service
 ```
+
+## Future plans
+- make master branch just for base main (kde) configs and then make `ecobee-kde` and `personal-kde` branches and all other following branches to rebase from master
