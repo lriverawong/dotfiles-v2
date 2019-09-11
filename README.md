@@ -62,3 +62,8 @@ yay -S - < packages/arch/aur-pkglist.txt
   ```sh
   sudo mkinitcpio -p linux<kernelversion>
   ```
+## KDE Keymaps
+- KWin
+    - Go to the `Global Shorcuts` application and import `./kde-shortcuts/kwin-global-shortcuts` 
+- Custom Shortcuts Group
+    - Go to the `Custom Shortcuts` application and import `./kde-shortcuts/custom-shortcuts`
