@@ -53,6 +53,13 @@ path=(
 # loading pure theme
 autoload -U promptinit; promptinit
 prompt pure
+source '/opt/kube-ps1/kube-ps1.sh'
+PROMPT='$(kube_ps1)'$PROMPT
+function get_cluster_short() {
+  echo "$1" | cut -d '_' -f4
+}
+
+KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
 
 # loading completions(?)
 autoload -U compinit && compinit
@@ -75,6 +82,9 @@ eval "$(direnv hook zsh)"
 
 # default editor
 export EDITOR="nvim"
+
+# alias for working on ev3nts app
+alias ev="docker-compose exec web-app"
 
 # ---------------------
 # User configuration
