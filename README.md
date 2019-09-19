@@ -30,3 +30,6 @@ sudo pacman -S - < packages/arch/pacman-pkglist.txt
 ```
 yay -S - < packages/arch/aur-pkglist.txt
 ```
+
+## Test
+Test edit for rebasing
