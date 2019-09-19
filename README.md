@@ -30,6 +30,13 @@ sudo pacman -S - < packages/arch/pacman-pkglist.txt
 yay -S - < packages/arch/aur-pkglist.txt
 ```
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+## Test
+Test edit for rebasing
+=======
+>>>>>>> 8a95881... accepted rebase
 ## Hibernation - Manjaro
 - Check kernel version
   ```sh
@@ -61,3 +68,7 @@ systemctl --user status ssh-agent.service
 
 ## Future plans
 - make master branch just for base main (kde) configs and then make `ecobee-kde` and `personal-kde` branches and all other following branches to rebase from master
+<<<<<<< HEAD
+=======
+>>>>>>> added back in workstation configs
+>>>>>>> 8a95881... accepted rebase
