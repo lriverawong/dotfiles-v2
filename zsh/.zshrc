@@ -25,18 +25,11 @@ chpwd() {
   ls -lah
 }
 
-# add gcloud completion
-source /opt/google-cloud-sdk/completion.zsh.inc
-
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
   "$HOME/.zfunctions"
   ~/.oh-my-zsh/custom_completions
-  $fpath
 )
-
-# kubectl
-source <(kubectl completion zsh)
 
 #go
 export GOPATH=$HOME/go
@@ -46,7 +39,6 @@ path=(
   ~/bin
   $GOPATH/bin
   ~/.local/bin
-  /snap/bin/
   $path
 )
 
