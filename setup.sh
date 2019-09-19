@@ -40,5 +40,11 @@ if [ ! -d ~/.oh-my-zsh ]; then
     ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
 fi
 
+bash ./stow.sh
+
+systemctl --user daemon-reload
+systemctl --user start ssh-agent.service
+systemctl --user enable ssh-agent.service
+
 # done
 echo 'Done setup!'
