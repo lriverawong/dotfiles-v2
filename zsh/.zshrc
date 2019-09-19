@@ -29,6 +29,7 @@ chpwd() {
 fpath=(
   "$HOME/.zfunctions"
   ~/.oh-my-zsh/custom_completions
+  $fpath
 )
 
 #go
