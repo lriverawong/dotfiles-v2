@@ -1,6 +1,7 @@
 direnv
 google-chrome
 google-cloud-sdk
+kube-ps1
 nordvpn
 plasma5-applets-plasma-pstate
 simplenote
