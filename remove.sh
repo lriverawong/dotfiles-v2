@@ -22,3 +22,7 @@ sudo rm -rf /opt/terraform
 sudo rm /usr/local/bin/helm
 sudo rm -rf /opt/helm
 rm -rf ~/.helm
+
+# ssh-agent
+systemctl --user stop ssh-agent.service
+systemctl --user disable ssh-agent.service

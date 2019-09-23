@@ -66,3 +66,7 @@ sudo gpasswd -a $USER input
 # install AUR packages
 yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
 
+# ssh-agent
+systemctl --user daemon-reload
+systemctl --user start ssh-agent.service
+systemctl --user enable ssh-agent.service
