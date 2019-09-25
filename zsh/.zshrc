@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 
 # ZSH_THEME="devops-zsh/senpai-long"
-ZSH_THEME=""
+ZSH_THEME="spaceship"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -30,7 +30,7 @@ source /opt/google-cloud-sdk/completion.zsh.inc
 
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
-  "$HOME/.zfunctions"
+  # "$HOME/.zfunctions"
   ~/.oh-my-zsh/custom_completions
   $fpath
 )
@@ -51,17 +51,17 @@ path=(
 )
 
 # loading pure theme
-autoload -U promptinit; promptinit
-prompt pure
-source '/opt/kube-ps1/kube-ps1.sh'
-PROMPT='$(kube_ps1)'$PROMPT
-function get_cluster_short() {
-  echo "$1" | cut -d '_' -f4
-}
+# autoload -U promptinit; promptinit
+# prompt spaceship
+# source '/opt/kube-ps1/kube-ps1.sh'
+# PROMPT='$(kube_ps1)'$PROMPT
+# function get_cluster_short() {
+#   echo "$1" | cut -d '_' -f4
+# }
 
-KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
+# KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
 
-# loading completions(?)
+# loading completions
 autoload -U compinit && compinit
 
 # helm aliases
