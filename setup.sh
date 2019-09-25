@@ -14,13 +14,10 @@ done
 
 # Setup for arch based systems
 if [ ! -d ~/.oh-my-zsh ]; then
-  # install zsh
-  sudo pacman -S zsh --noconfirm
-
   # install oh-my-zsh separately
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
   # change default shell
-  chsh -s `which zsh` luis
+  chsh -s `which zsh` $USER
 
   # --- plugins ---
   # zsh syntax highlighting

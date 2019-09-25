@@ -30,8 +30,8 @@ sudo gpasswd -d $USER input
 sudo gpasswd -d $USER docker
 
 # remove ssh agent
-systemctl --user disable ssh-agent.service
 systemctl --user stop ssh-agent.service
+systemctl --user disable ssh-agent.service
 
 # done
 echo "Done removal script!"

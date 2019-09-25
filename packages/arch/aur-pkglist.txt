@@ -1,7 +1,13 @@
 direnv
+otf-fira-code
 google-chrome
 google-cloud-sdk
+kube-ps1
+navi
+neovim-gtk
 nordvpn
+plasma5-applets-plasma-pstate
+powerline-fonts-git
 simplenote
 slack-desktop
 sops
