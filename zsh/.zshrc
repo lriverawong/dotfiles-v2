@@ -13,7 +13,7 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt zsh-syntax-highlighting history-substring-search docker helm)
+plugins=(git git-prompt zsh-syntax-highlighting history-substring-search docker helm vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,6 +63,10 @@ path=(
 
 # loading completions
 autoload -U compinit && compinit
+
+# Add terraform autocomplete
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/terraform/terraform terraform
 
 # helm aliases
 alias hh="helm tiller run helm"
@@ -171,3 +175,5 @@ alias ev="docker-compose exec web-app"
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
