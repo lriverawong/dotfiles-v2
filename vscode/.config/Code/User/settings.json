@@ -15,4 +15,9 @@
     "workbench.colorTheme": "Moonlight II",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-n>": false,
+    }
 }
