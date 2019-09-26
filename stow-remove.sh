@@ -6,6 +6,7 @@ echo "=== Starting to link all dotfiles ==="
 
 stow -Dv conky
 stow -Dv docker
+stow -Dv fonts
 stow -Dv github-config
 stow -Dv glances
 stow -Dv konsole

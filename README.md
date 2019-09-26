@@ -49,7 +49,7 @@ yay -S - < packages/arch/aur-pkglist.txt
   ```
 ## KDE Keymaps
 - KWin
-    - Go to the `Global Shorcuts` application and import `./kde-shortcuts/kwin-global-shortcuts` 
+    - Go to the `Global Shorcuts` application and import `./kde-shortcuts/kwin-global-shortcuts`
 - Custom Shortcuts Group
     - Go to the `Custom Shortcuts` application and import `./kde-shortcuts/custom-shortcuts`
 
@@ -58,3 +58,8 @@ Check the status after install
 ```
 systemctl --user status ssh-agent.service
 ```
+
+## Fonts
+
+With ligature: `Fira Code`
+- `Konsole` terminal requires a fallback of emojis, therefore need the `fonts` directory to be stow activated and then set in the appearance profile for `Konsole`
