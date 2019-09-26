@@ -1,0 +1,26 @@
+{
+    "window.zoomLevel": -1,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "go.gopath": "/home/home/go",
+    "go.goroot": "/usr/lib/go",
+    "go.formatTool": "goformat",
+    "go.autocompleteUnimportedPackages": true,
+    "[go]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "workbench.colorTheme": "Moonlight II",
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-n>": false,
+        "<C-w>": false,
+        "<C-[>": false,
+        "<C-]>": false,
+    }
+}

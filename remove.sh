@@ -26,3 +26,9 @@ rm -rf ~/.helm
 # ssh-agent
 systemctl --user stop ssh-agent.service
 systemctl --user disable ssh-agent.service
+
+# vscode extensions
+cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --uninstall-extension
+
+# done
+echo "Done removal!"

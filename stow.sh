@@ -18,6 +18,7 @@ stow -v ssh-agent
 stow -v ssh-add
 stow -v ssh-askpass
 stow -v tmux
+stow -v vscode
 stow -v vim
 stow -v X
 stow -v zsh

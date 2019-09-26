@@ -19,6 +19,7 @@ stow -Dv ssh-add
 stow -Dv ssh-askpass
 stow -Dv tmux
 stow -Dv vim
+stow -Dv vscode
 stow -Dv X
 stow -Dv zshsh
 

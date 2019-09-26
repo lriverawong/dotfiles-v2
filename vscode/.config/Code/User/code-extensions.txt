@@ -1,0 +1,16 @@
+atomiks.moonlight
+cdpautsch.tpl
+dsznajder.es7-react-js-snippets
+fallenwood.vimL
+mauve.terraform
+mgmcdermott.vscode-language-babel
+ms-azuretools.vscode-docker
+ms-kubernetes-tools.vscode-kubernetes-tools
+ms-python.python
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode-remote.remote-ssh-explorer
+ms-vscode.Go
+redhat.vscode-yaml
+vscode-icons-team.vscode-icons
+vscodevim.vim
