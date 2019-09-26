@@ -86,5 +86,8 @@ yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
 systemctl --user start ssh-agent.service
 systemctl --user enable ssh-agent.service
 
+# vscode extensions
+cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --install-extension
+
 # done
 echo 'Done setup!'

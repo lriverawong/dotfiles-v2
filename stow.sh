@@ -20,6 +20,7 @@ stow -v ssh-add
 stow -v ssh-askpass
 stow -v tmux
 stow -v vim
+stow -v vscode
 stow -v X
 stow -v zsh
 

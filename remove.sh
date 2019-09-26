@@ -33,5 +33,8 @@ sudo gpasswd -d $USER docker
 systemctl --user stop ssh-agent.service
 systemctl --user disable ssh-agent.service
 
+# remove vscode extensions
+cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --uninstall-extension
+
 # done
 echo "Done removal script!"
