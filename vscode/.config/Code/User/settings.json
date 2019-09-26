@@ -22,5 +22,6 @@
         "<C-w>": false,
         "<C-[>": false,
         "<C-]>": false,
+        "<C-Shift-t>": false,
     }
 }
