@@ -2,7 +2,7 @@
     "window.zoomLevel": -1,
     "editor.fontLigatures": true,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "go.gopath": "/home/home/go",
+    "go.gopath": "/home/luis/go",
     "go.goroot": "/usr/lib/go",
     "go.formatTool": "goformat",
     "go.autocompleteUnimportedPackages": true,
@@ -19,5 +19,9 @@
         "<C-a>": false,
         "<C-f>": false,
         "<C-n>": false,
+        "<C-w>": false,
+        "<C-[>": false,
+        "<C-]>": false,
+        "<C-Shift-t>": false,
     }
 }
