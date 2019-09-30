@@ -15,8 +15,8 @@ sudo rm /usr/bin/kubens
 sudo rm -rf /opt/kubectx/
 
 # delete terraform
-sudo rm /usr/local/bin/terraform
-sudo rm -rf /opt/terraform
+sudo rm /usr/local/bin/terraform*
+sudo rm -rf /opt/terraform*
 
 # delete helm
 sudo rm /usr/local/bin/helm

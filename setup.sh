@@ -37,9 +37,20 @@ sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 pushd /tmp
   sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip -P /tmp/
   sudo unzip /tmp/terraform_0.11.14_linux_amd64.zip
-  sudo mkdir -p /opt/terraform
-  sudo mv /tmp/terraform /opt/terraform/
-  sudo ln -sf /opt/terraform/terraform /usr/local/bin/terraform
+  sudo mv /tmp/terraform /tmp/terraform11
+  sudo mkdir -p /opt/terraform11
+  sudo mv /tmp/terraform11 /opt/terraform11/
+  sudo ln -sf /opt/terraform11/terraform11 /usr/local/bin/terraform11
+popd
+
+# install terraform v.0.12.9
+pushd /tmp
+  sudo wget https://releases.hashicorp.com/terraform/0.12.9/terraform_0.12.9_linux_amd64.zip -P /tmp/
+  sudo unzip /tmp/terraform_0.12.9_linux_amd64.zip
+  sudo mv /tmp/terraform /tmp/terraform12
+  sudo mkdir -p /opt/terraform12
+  sudo mv /tmp/terraform12 /opt/terraform12/
+  sudo ln -sf /opt/terraform12/terraform12 /usr/local/bin/terraform12
 popd
 
 # install helm
