@@ -1,5 +1,6 @@
 atomiks.moonlight
 fallenwood.vimL
+mauve.terraform
 ms-python.python
 ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
