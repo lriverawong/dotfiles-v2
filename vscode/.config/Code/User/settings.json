@@ -36,5 +36,7 @@
     "terraform.languageServer": {
         "enabled": true,
         "args": []
-    }
+    },
+    "terminal.integrated.setLocaleVariables": false,
+    "telemetry.enableTelemetry": false
 }
