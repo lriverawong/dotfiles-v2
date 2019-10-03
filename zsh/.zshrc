@@ -66,7 +66,8 @@ autoload -U compinit && compinit
 
 # Add terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/terraform/terraform terraform
+complete -o nospace -C /opt/terraform/terraform11 terraform11
+complete -o nospace -C /opt/terraform/terraform12 terraform12
 
 # helm aliases
 alias hh="helm tiller run helm"
