@@ -46,6 +46,7 @@ path=(
   ~/bin
   $GOPATH/bin
   ~/.local/bin
+  ~/.tfenv/bin
   /snap/bin/
   $path
 )

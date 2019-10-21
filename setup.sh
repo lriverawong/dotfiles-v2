@@ -46,27 +46,6 @@ sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
 sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
-# -- Replaced by tfenv
-# install terraform v.0.11.14
-# pushd /tmp
-#   sudo wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip -P /tmp/
-#   sudo unzip /tmp/terraform_0.11.14_linux_amd64.zip
-#   sudo mv /tmp/terraform /tmp/terraform11
-#   sudo mkdir -p /opt/terraform11
-#   sudo mv /tmp/terraform11 /opt/terraform11/
-#   sudo ln -sf /opt/terraform11/terraform11 /usr/local/bin/terraform11
-# popd
-#
-# install terraform v.0.12.9
-# pushd /tmp
-#   sudo wget https://releases.hashicorp.com/terraform/0.12.9/terraform_0.12.9_linux_amd64.zip -P /tmp/
-#   sudo unzip /tmp/terraform_0.12.9_linux_amd64.zip
-#   sudo mv /tmp/terraform /tmp/terraform12
-#   sudo mkdir -p /opt/terraform12
-#   sudo mv /tmp/terraform12 /opt/terraform12/
-#   sudo ln -sf /opt/terraform12/terraform12 /usr/local/bin/terraform12
-# popd
-
 # install helm
 pushd /tmp
   sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
@@ -94,6 +73,13 @@ helm plugin install https://github.com/rimusz/helm-tiller
 # needs sops installed from AUR
 helm plugin install https://github.com/futuresimple/helm-secrets
 helm plugin install https://github.com/hayorov/helm-gcs
+
+# tfenv -> terraform 11 and 12
+if [! -d ~/.tfenv]; then
+    git clone https://github.com/tfutils/tfenv.git $HOME/.tfenv
+fi
+$HOME/.tfenv/bin/tfenv install 0.11.14
+$HOME/.tfenv/bin/tfenv install 0.12.12
 
 # ssh-agent
 systemctl --user daemon-reload
