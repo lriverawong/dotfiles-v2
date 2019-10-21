@@ -62,3 +62,9 @@ yay -S - < packages/arch/aur-pkglist.txt
   ```sh
   sudo mkinitcpio -p linux<kernelversion>
   ```
+ ## Todo
+ - `gcloud init` and project setup
+ - tfenv setup
+- copy KDE/Plasma settings into part of the config
+    - creating a backup of the local configs for kde
+    - linking through stow? the configs for KDE/Plasma

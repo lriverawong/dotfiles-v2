@@ -7,8 +7,10 @@ navi
 neovim-gtk
 nordvpn
 plasma5-applets-plasma-pstate
+plasma5-applets-redshift-control
 powerline-fonts-git
 simplenote
 slack-desktop
 sops
+spotify
 visual-studio-code-bin

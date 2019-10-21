@@ -1,6 +1,5 @@
 {
     "window.zoomLevel": 0,
-    "editor.fontLigatures": true,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "go.gopath": "/home/home/go",
     "go.goroot": "/usr/lib/go",
@@ -36,5 +35,6 @@
     "terraform.languageServer": {
         "enabled": true,
         "args": []
-    }
+    },
+    "editor.fontLigatures": true
 }
