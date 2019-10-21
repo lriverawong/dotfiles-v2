@@ -70,6 +70,7 @@ yay -S - < packages/arch/aur-pkglist.txt
     - linking through stow? the configs for kde/plasma
 - gopass config
 - global emoji font support (KDE)
+- `libinput-gestures-setup autostart`
 
 ## Fonts
 - follow the [guide](https://www.reddit.com/r/archlinux/comments/9q8dlj/how_to_better_enable_color_emojis/)
