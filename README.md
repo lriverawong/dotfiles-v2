@@ -68,3 +68,4 @@ yay -S - < packages/arch/aur-pkglist.txt
 - copy KDE/Plasma settings into part of the config
     - creating a backup of the local configs for kde
     - linking through stow? the configs for KDE/Plasma
+- gopass config

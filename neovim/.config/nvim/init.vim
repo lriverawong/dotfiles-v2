@@ -37,6 +37,7 @@ Plug 'connorholyday/vim-snazzy'
 " If installed using git
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'vim-airline/vim-airline'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Some defaults
