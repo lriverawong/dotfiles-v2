@@ -11,7 +11,7 @@
             "source.organizeImports": true
         }
     },
-    "workbench.colorTheme": "Night Owl",
+    "workbench.colorTheme": "Monokai",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {

@@ -13,4 +13,5 @@ simplenote
 slack-desktop
 sops
 spotify
+teams-for-linux
 visual-studio-code-bin
