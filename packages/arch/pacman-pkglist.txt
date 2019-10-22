@@ -17,6 +17,7 @@ python-pip
 redshift
 stow
 sysstat
+thefuck
 trizen
 wmctrl
 xclip
