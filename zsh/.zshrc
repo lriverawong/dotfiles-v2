@@ -71,8 +71,8 @@ complete -o nospace -C /opt/terraform/terraform11 terraform11
 complete -o nospace -C /opt/terraform/terraform12 terraform12
 
 # helm aliases
-alias hh="helm tiller run helm"
-alias hr="helm tiller run"
+alias hh="helm tiller run -- helm"
+alias hr="helm tiller run --"
 alias ht="helm tiller start"
 alias hts="helm tiller stop"
 
