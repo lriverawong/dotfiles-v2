@@ -20,7 +20,16 @@ stow -v ssh-askpass
 stow -v tmux
 stow -v vscode
 stow -v vim
+if [ -f ~/.xinitrc ];then
+  mv ~/.xinitrc ~/.xinitrc.bak
+fi
+if [ -f ~/.profile ];then
+  mv ~/.profile ~/.profile.bak
+fi
 stow -v X
+if [ -f ~/.zshrc ];then
+  mv ~/.zshrc ~/.zshrc.bak
+fi
 stow -v zsh
 
 echo "=== Done linking all dotfiles ==="

@@ -67,8 +67,7 @@ autoload -U compinit && compinit
 
 # Add terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/terraform/terraform11 terraform11
-complete -o nospace -C /opt/terraform/terraform12 terraform12
+complete -o nospace -C /home/luis-ecobee/.tfenv/bin/terraform terraform
 
 # helm aliases
 alias hh="helm tiller run -- helm"
@@ -179,6 +178,3 @@ eval $(thefuck --alias)
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-

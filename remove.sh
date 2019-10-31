@@ -15,8 +15,8 @@ sudo rm /usr/bin/kubens
 sudo rm -rf /opt/kubectx/
 
 # delete terraform
-sudo rm /usr/local/bin/terraform*
-sudo rm -rf /opt/terraform*
+$HOME/.tfenv/bin/tfenv uninstall 0.11.14
+$HOME/.tfenv/bin/tfenv uninstall 0.12.12
 
 # delete helm
 sudo rm /usr/local/bin/helm

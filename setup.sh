@@ -48,8 +48,8 @@ sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
 # install helm
 pushd /tmp
-  sudo wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz -P /tmp/
-  sudo tar xvfz /tmp/helm-v2.14.3-linux-amd64.tar.gz
+  sudo wget https://get.helm.sh/helm-v2.15.2-linux-amd64.tar.gz -P /tmp/
+  sudo tar xvfz /tmp/helm-v2.15.2-linux-amd64.tar.gz
   sudo mkdir -p /opt/helm
   sudo mv /tmp/linux-amd64/helm /opt/helm
   sudo ln -sf /opt/helm/helm /usr/local/bin/helm
