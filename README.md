@@ -72,6 +72,29 @@ yay -S - < packages/arch/aur-pkglist.txt
 - global emoji font support (KDE)
 - `libinput-gestures-setup autostart`
 
+## Work VPN Access
+- need the following package [openvpn-update-systemd-resolved](https://github.com/jonathanio/update-systemd-resolved)
+```
+yay -S openvpn-update-systemd-resolved
+sudo systemctl enable systemd-resolved.service
+sudo systemctl start systemd-resolved.service
+```
+
+Update your work vpn configuration file to include the following, replacing as needed
+```
+script-security 2
+setenv PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+up /etc/openvpn/scripts/update-systemd-resolved
+up-restart
+down /etc/openvpn/scripts/update-systemd-resolved
+down-pre
+```
+
+Start the vpn connection using the command line or the script in `scripts/*`
+```
+sudo openvpn --config ~/.vpn/<work>.ovpn --auth-retry interact --auth-user-pass
+```
+
 ## Fonts
 - follow the [guide](https://www.reddit.com/r/archlinux/comments/9q8dlj/how_to_better_enable_color_emojis/)
   - `sudo pacman -S noto-fonts-emoji`, although it should already be installed through `setup.sh`

@@ -86,8 +86,12 @@ systemctl --user daemon-reload
 systemctl --user start ssh-agent.service
 systemctl --user enable ssh-agent.service
 
+# openvpn-update-systemd-resolved for vpn
+sudo systemctl enable systemd-resolved.service
+sudo systemctl start systemd-resolved.service
+
 # install vscode extensions
-cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --install-extensionc
+cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --install-extension
 
 # tfenv
 sudo tfenv install 0.11.14
