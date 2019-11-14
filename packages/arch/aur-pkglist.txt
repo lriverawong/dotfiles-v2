@@ -16,4 +16,5 @@ slack-desktop
 sops
 spotify
 teams-for-linux
+tflint
 visual-studio-code-bin

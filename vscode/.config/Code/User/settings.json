@@ -1,7 +1,7 @@
 {
     "window.zoomLevel": 0,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "go.gopath": "/home/home/go",
+    "go.gopath": "/home/luis-ecobee/go",
     "go.goroot": "/usr/lib/go",
     "go.formatTool": "goformat",
     "go.autocompleteUnimportedPackages": true,
@@ -36,5 +36,9 @@
         "enabled": true,
         "args": []
     },
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "terminal.external.linuxExec": "konsole",
+    "terraform.path": "/home/luis-ecobee/.tfenv/bin/terraform",
+    "terraform.lintPath": "/usr/bin/tflint",
+    "terraform.telemetry.enabled": false
 }
