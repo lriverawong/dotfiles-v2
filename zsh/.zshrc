@@ -46,6 +46,7 @@ path=(
   ~/bin
   $GOPATH/bin
   ~/.local/bin
+  ~/.tfenv/bin
   /snap/bin/
   $path
 )
@@ -66,11 +67,11 @@ autoload -U compinit && compinit
 
 # Add terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/terraform/terraform terraform
+complete -o nospace -C /home/luis-ecobee/.tfenv/bin/terraform terraform
 
 # helm aliases
-alias hh="helm tiller run helm"
-alias hr="helm tiller run"
+alias hh="helm tiller run -- helm"
+alias hr="helm tiller run --"
 alias ht="helm tiller start"
 alias hts="helm tiller stop"
 
@@ -90,6 +91,8 @@ export EDITOR="nvim"
 # alias for working on ev3nts app
 alias ev="docker-compose exec web-app"
 
+# command correction
+eval $(thefuck --alias)
 # ---------------------
 # User configuration
 
@@ -175,5 +178,3 @@ alias ev="docker-compose exec web-app"
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-

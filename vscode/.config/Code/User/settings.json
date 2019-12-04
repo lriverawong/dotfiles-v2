@@ -1,8 +1,7 @@
 {
     "window.zoomLevel": 0,
-    "editor.fontLigatures": true,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "go.gopath": "/home/home/go",
+    "go.gopath": "/home/luis-ecobee/go",
     "go.goroot": "/usr/lib/go",
     "go.formatTool": "goformat",
     "go.autocompleteUnimportedPackages": true,
@@ -12,7 +11,7 @@
             "source.organizeImports": true
         }
     },
-    "workbench.colorTheme": "Moonlight II",
+    "workbench.colorTheme": "Monokai",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
@@ -23,5 +22,23 @@
         "<C-[>": false,
         "<C-]>": false,
         "<C-Shift-t>": false,
-    }
+    },
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    },
+    "editor.fontLigatures": true,
+    "terminal.external.linuxExec": "konsole",
+    "terraform.path": "/home/luis-ecobee/.tfenv/bin/terraform",
+    "terraform.lintPath": "/usr/bin/tflint",
+    "terraform.telemetry.enabled": false
 }

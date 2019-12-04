@@ -1,1 +1,6 @@
 neovim/.config/nvim/plugged/
+!vscode/.config/Code/code-extensions.txt
+!vscode/.config/Code/User/keybindings.json
+!vscode/.config/Code/User/settings.json
+vscode/
+ssh-agent/.config/systemd/user/default.target.wants/

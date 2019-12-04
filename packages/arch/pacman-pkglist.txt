@@ -15,8 +15,10 @@ piper
 python-neovim
 python-pip
 redshift
+ripgrep
 stow
 sysstat
+thefuck
 trizen
 wmctrl
 xclip
