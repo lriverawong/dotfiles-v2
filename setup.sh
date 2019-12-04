@@ -18,6 +18,8 @@ if [ ! -d ~/.oh-my-zsh ]; then
     # --- custom themes ---
     # -- pure zsh theme --
     git clone https://github.com/sindresorhus/pure.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/pure
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
     # check for existence of zfunctions directory
     if [ ! -d ~/.zfunctions ]; then
         mkdir ~/.zfunctions
@@ -26,6 +28,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
     # link
     ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
     ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
+    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 fi
 
 # install kubectx
