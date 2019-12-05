@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "go.gopath": "/home/luis-ecobee/go",
     "go.goroot": "/usr/lib/go",
@@ -22,6 +22,9 @@
         "<C-[>": false,
         "<C-]>": false,
         "<C-Shift-t>": false,
+        "<C-c>": false,
+        "<C-x>": false,
+        "<C-v>": false,
     },
     "terraform.indexing": {
         "enabled": false,
