@@ -30,6 +30,8 @@ if [ ! -d ~/.oh-my-zsh ]; then
     # --- custom themes ---
     # -- pure zsh theme --
     git clone https://github.com/sindresorhus/pure.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/pure
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
     # check for existence of zfunctions directory
     if [ ! -d ~/.zfunctions ]; then
         mkdir ~/.zfunctions
@@ -75,9 +77,10 @@ helm plugin install https://github.com/futuresimple/helm-secrets
 helm plugin install https://github.com/hayorov/helm-gcs
 
 # tfenv -> terraform 11 and 12
-if [! -d ~/.tfenv]; then
+if [[ ! -d ~/.tfenv ]]; then
     git clone https://github.com/tfutils/tfenv.git $HOME/.tfenv
 fi
+
 $HOME/.tfenv/bin/tfenv install 0.11.14
 $HOME/.tfenv/bin/tfenv install 0.12.12
 
@@ -94,8 +97,8 @@ sudo systemctl start systemd-resolved.service
 cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --install-extension
 
 # tfenv
-sudo tfenv install 0.11.14
-sudo tfenv install 0.12.9
+tfenv install 0.11.14
+tfenv install 0.12.9
 
 # done
 echo "Done install script!"
