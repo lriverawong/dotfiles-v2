@@ -51,7 +51,6 @@ path=(
 )
 
 # loading pure theme
-<<<<<<< HEAD
 # autoload -U promptinit; promptinit
 # prompt spaceship
 # source '/opt/kube-ps1/kube-ps1.sh'
@@ -59,17 +58,6 @@ path=(
 # function get_cluster_short() {
 #   echo "$1" | cut -d '_' -f4
 # }
-=======
-autoload -U promptinit; promptinit
-prompt pure
-source '/opt/kube-ps1/kube-ps1.sh'
-PROMPT='$(kube_ps1)'$PROMPT
-function get_cluster_short() {
-  echo "$1" | cut -d '_' -f4
-}
-
-KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
->>>>>>> ecobee-kde
 
 # KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
 
@@ -97,9 +85,6 @@ alias dcud="docker-compose up -d"
 eval "$(direnv hook zsh)"
 
 # default editor
-<<<<<<< HEAD
-export EDITOR="nvim"
-=======
 export EDITOR="nvim"
 
 # alias for working on ev3nts app
@@ -190,4 +175,3 @@ alias ev="docker-compose exec web-app"
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
->>>>>>> ecobee-kde
