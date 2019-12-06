@@ -3,11 +3,16 @@ otf-fira-code
 google-chrome
 google-cloud-sdk
 kube-ps1
+<<<<<<< HEAD
 navi
 neovim-gtk
 nordvpn
 plasma5-applets-plasma-pstate
 powerline-fonts-git
+=======
+nordvpn
+plasma5-applets-plasma-pstate
+>>>>>>> ecobee-kde
 simplenote
 slack-desktop
 sops
