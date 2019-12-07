@@ -1,0 +1,15 @@
+curl
+flatpak
+git
+gvim
+htop
+neovim
+nmap
+stow
+sysstat
+tlp
+tlp-rdw
+tmux
+vlc
+wget
+zsh
