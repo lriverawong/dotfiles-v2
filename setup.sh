@@ -18,7 +18,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
     # install oh-my-zsh separately
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
     # change default shell
-    chsh -s `which zsh` $USER
+    chsh -s `which zsh` $(whoami)
 
     # --- plugins ---
     # zsh syntax highlighting
@@ -104,23 +104,53 @@ elif [[ type dnf &> /dev/null ]]; then
     flatpak install -y flathub com.github.IsmaelMartinez.teams_for_linux
     # gcloud
     sudo sh -c 'echo -e "[google-cloud-sdk]\nname=Google Cloud SDK\nbaseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg\n\thttps://packages.cloud.google.com/yum/doc/rpm-package-key.gpg" > /etc/yum.repos.d/google-cloud-sdk2.repo'
-    # to-do
-    # - fira-fonts
-    # - keybase
-    # - simplenote
-    # - nordvpn
-    # - openvpn-update-systemd-resolved
-    # - keybase
-    # - thefuck
-    # - gesture [cli, and gui]
-
+    # fira-code fonts
+    sudo dnf copr -y enable evana/fira-code-fonts
+    sudo dnf install -y fira-code-fonts
+    # simplenote
+    sudo wget -P /tmp/ -qnc https://github.com/Automattic/simplenote-electron/releases/download/v1.12.0/Simplenote-linux-1.12.0-x86_64.rpm
+    sudo dnf install -y /tmp//Simplenote-linux-1.12.0-x86_64.rpm
+    # keybase
+    sudo yum install https://prerelease.keybase.io/keybase_amd64.rpm
+    run_keybase
+    # nordvpn
+    sudo wget -P /tmp/ -qnc https://repo.nordvpn.com/yum/nordvpn/centos/noarch/Packages/n/nordvpn-release-1.0.0-1.noarch.rpm
+    sudo dnf install -y nordvpn-release-1.0.0-1.noarch.rpm
+    sudo dnf update
+    sudo dnf install -y nordvpn
+    # openvpn-update-systemd-resolved
+    git clone https://github.com/jonathanio/update-systemd-resolved.git /tmp/update-systemd-resolved
+    pushd /tmp/update-systemd-resolved
+    sudo make
+    popd
+    sudo systemctl enable systemd-resolved.service
+    sudo systemctl start systemd-resolved.service
+    sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+    # thefuck
+    sudo dnf install -y python-pip python-devel
+    sudo pip install -y thefuck
+    # gesture [cli, and gui]
+    sudo git clone https://github.com/bulletmark/libinput-gestures.git /opt/libinput-gestures/
+    pushd /opt/libinput-gestures
+    sudo make install
+    popd
+    # docker
+    sudo dnf install -y grubby
+    sudo grubby --update-kernel=ALL --args="systemd.unified_cgroup_hierarchy=0"
+    # --- need to reboot then execute the following ---
+    # sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+    # sudo dnf install -y docker-ce docker-compose
+    # sudo systemctl enable --now docker
+    # sudo usermod -aG docker $(whoami)
 else
     echo "No valid distro found, exiting..."
     exit 1
 fi
 
 # add user to input group for touchpad gestures
-sudo gpasswd -a $USER input
+sudo gpasswd -a $(whoami) input
+libinput-gestures-setup autostart
+# libinput-gestures-setup start
 
 # setup helm
 helm init --client-only
