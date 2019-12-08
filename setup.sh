@@ -104,6 +104,7 @@ elif [[ type dnf &> /dev/null ]]; then
     flatpak install -y flathub com.github.IsmaelMartinez.teams_for_linux
     # gcloud
     sudo sh -c 'echo -e "[google-cloud-sdk]\nname=Google Cloud SDK\nbaseurl=https://packages.cloud.google.com/yum/repos/cloud-sdk-el7-x86_64\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg\n\thttps://packages.cloud.google.com/yum/doc/rpm-package-key.gpg" > /etc/yum.repos.d/google-cloud-sdk2.repo'
+    sudo dnf install -y google-cloud-sdk kubectl
     # fira-code fonts
     sudo dnf copr -y enable evana/fira-code-fonts
     sudo dnf install -y fira-code-fonts

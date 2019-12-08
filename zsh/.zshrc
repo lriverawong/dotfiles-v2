@@ -26,7 +26,10 @@ chpwd() {
 }
 
 # add gcloud completion
-source /opt/google-cloud-sdk/completion.zsh.inc
+# manjaro
+# source /opt/google-cloud-sdk/completion.zsh.inc
+# fedora
+source /usr/share/google-cloud-sdk/completion.zsh.inc
 
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
@@ -63,7 +66,8 @@ path=(
 # KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
 
 # loading completions
-autoload -U compinit && compinit
+autoload -Uz compinit compdef
+compinit
 
 # Add terraform autocomplete
 autoload -U +X bashcompinit && bashcompinit
@@ -89,7 +93,7 @@ eval "$(direnv hook zsh)"
 export EDITOR="nvim"
 
 # alias for working on ev3nts app
-alias ev="docker-compose exec web-app"
+# alias ev="docker-compose exec web-app"
 
 # command correction
 eval $(thefuck --alias)
