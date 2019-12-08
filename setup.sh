@@ -143,6 +143,9 @@ elif [[ type dnf &> /dev/null ]]; then
     # sudo dnf install -y docker-ce docker-compose
     # sudo systemctl enable --now docker
     # sudo usermod -aG docker $(whoami)
+    # sops
+    sudo wget -P /tmp/ -qnc https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0-1.x86_64.rpm
+    sudo dnf install -y /tmp/sops-v3.5.0-1.x86_64.rpm
 else
     echo "No valid distro found, exiting..."
     exit 1
