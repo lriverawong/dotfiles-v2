@@ -177,8 +177,8 @@ systemctl --user start ssh-agent.service
 systemctl --user enable ssh-agent.service
 
 # openvpn-update-systemd-resolved for vpn
-sudo systemctl enable systemd-resolved.service
-sudo systemctl start systemd-resolved.service
+# sudo systemctl enable systemd-resolved.service
+# sudo systemctl start systemd-resolved.service
 
 # install vscode extensions
 cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --install-extension
@@ -190,6 +190,9 @@ tfenv install 0.12.9
 # post install - rename contexts for kubectl
 # kubectl config rename-context gke_corporate-site-1523484418716_us-central1_www-cluster e_www-cluster
 # kubectl config rename-context gke_consumer-web-dev-208518_us-central1-a_consumerwebsite-cluster-dev e_cw-dev 
+
+# neovim
+sudo dnf install python3-neovim
 
 # done
 echo "Done install script!"

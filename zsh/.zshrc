@@ -97,6 +97,8 @@ export EDITOR="nvim"
 
 # command correction
 eval $(thefuck --alias)
+
+alias cwe="./cw-docker.sh exec"
 # ---------------------
 # User configuration
 

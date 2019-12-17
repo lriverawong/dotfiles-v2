@@ -43,5 +43,6 @@
     "terminal.external.linuxExec": "konsole",
     "terraform.path": "/home/luis-ecobee/.tfenv/bin/terraform",
     "terraform.lintPath": "/usr/bin/tflint",
-    "terraform.telemetry.enabled": false
+    "terraform.telemetry.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false
 }
