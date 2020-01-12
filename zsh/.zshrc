@@ -43,14 +43,18 @@ source <(kubectl completion zsh)
 
 #go
 export GOPATH=$HOME/go
+export GO111MODULE=on
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
+  ~/opt/GoLand-2019.3/bin
+  ~/opt/JetBrains Rider-2019.3.1/bin
   $GOPATH/bin
   ~/.local/bin
   ~/.tfenv/bin
   /snap/bin/
+  ${KREW_ROOT:-$HOME/.krew}/bin
   $path
 )
 
@@ -99,6 +103,8 @@ export EDITOR="nvim"
 eval $(thefuck --alias)
 
 alias cwe="./cw-docker.sh exec"
+
+alias dce="docker-compose exec"
 # ---------------------
 # User configuration
 
