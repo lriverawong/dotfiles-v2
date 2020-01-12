@@ -8,13 +8,12 @@ navi
 neovim-gtk
 nordvpn
 openvpn-update-systemd-resolved
-plasma5-applets-plasma-pstate
 plasma5-applets-redshift-control
 powerline-fonts-git
 simplenote
 slack-desktop
 sops
 spotify
-teams-for-linux
+teams
 tflint
 visual-studio-code-bin

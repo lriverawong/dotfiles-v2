@@ -146,6 +146,9 @@ elif [[ type dnf &> /dev/null ]]; then
     # sops
     sudo wget -P /tmp/ -qnc https://github.com/mozilla/sops/releases/download/v3.5.0/sops-v3.5.0-1.x86_64.rpm
     sudo dnf install -y /tmp/sops-v3.5.0-1.x86_64.rpm
+
+    # neovim
+    sudo dnf install python3-neovim
 else
     echo "No valid distro found, exiting..."
     exit 1
@@ -167,7 +170,6 @@ helm plugin install https://github.com/hayorov/helm-gcs
 if [[ ! -d ~/.tfenv ]]; then
     git clone https://github.com/tfutils/tfenv.git $HOME/.tfenv
 fi
-
 $HOME/.tfenv/bin/tfenv install 0.11.14
 $HOME/.tfenv/bin/tfenv install 0.12.12
 
@@ -182,17 +184,6 @@ systemctl --user enable ssh-agent.service
 
 # install vscode extensions
 cat ./vscode/.config/Code/User/code-extensions.txt | xargs -L1 code --install-extension
-
-# tfenv
-tfenv install 0.11.14
-tfenv install 0.12.9
-
-# post install - rename contexts for kubectl
-# kubectl config rename-context gke_corporate-site-1523484418716_us-central1_www-cluster e_www-cluster
-# kubectl config rename-context gke_consumer-web-dev-208518_us-central1-a_consumerwebsite-cluster-dev e_cw-dev 
-
-# neovim
-sudo dnf install python3-neovim
 
 # done
 echo "Done install script!"

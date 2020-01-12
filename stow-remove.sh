@@ -14,13 +14,13 @@ stow -Dv neovim
 stow -Dv profile
 stow -Dv ranger
 stow -Dv scripts
-stow -Dv ssh-agent
-stow -Dv ssh-add
-stow -Dv ssh-askpass
+# stow -Dv ssh-agent
+# stow -Dv ssh-add
+# stow -Dv ssh-askpass
 stow -Dv tmux
 stow -Dv vim
 stow -Dv vscode
 stow -Dv X
-stow -Dv zshsh
+stow -Dv zsh
 
 echo "=== Done linking all dotfiles ==="
