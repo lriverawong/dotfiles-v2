@@ -73,6 +73,24 @@ if type pacman &> /dev/null; then
 
     # Sops doesn't like to be reinstalled multiples times without causing an error
     yay -S --noconfirm sops
+
+    # manual install of gestures
+    # https://gitlab.com/cunidev/gestures
+    sudo git clone https://gitlab.com/cunidev/gestures /opt/gestures/
+    pushd /opt/gestures
+    progs=(git python python-gobject libinput-gestures)
+    for p in "${progs[@]}"; do
+        if hash "$p" &>/dev/null
+        then
+            echo "$p is installed"
+        else
+            echo "$p is not installed, installing $p"
+            yay -S --needed --noconfirm $p
+        fi
+    done
+    sudo python3 setup.py install
+    popd
+
 elif type dnf &> /dev/null; then
     # --- Fedora Install ---
     # fix hostname
