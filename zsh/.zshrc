@@ -105,6 +105,12 @@ eval $(thefuck --alias)
 alias cwe="./cw-docker.sh exec"
 
 alias dce="docker-compose exec"
+
+# VTE
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+	source /etc/profile.d/vte.sh
+fi
+
 # ---------------------
 # User configuration
 
