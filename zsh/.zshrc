@@ -27,9 +27,9 @@ chpwd() {
 
 # add gcloud completion
 # manjaro
-# source /opt/google-cloud-sdk/completion.zsh.inc
+source /opt/google-cloud-sdk/completion.zsh.inc
 # fedora
-source /usr/share/google-cloud-sdk/completion.zsh.inc
+# source /usr/share/google-cloud-sdk/completion.zsh.inc
 
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
@@ -48,8 +48,8 @@ export GO111MODULE=on
 # Set the list of directories that Zsh searches for programs.
 path=(
   ~/bin
-  ~/opt/GoLand-2019.3/bin
-  ~/opt/JetBrains Rider-2019.3.1/bin
+  # ~/opt/GoLand-2019.3/bin
+  # ~/opt/JetBrains Rider-2019.3.1/bin
   $GOPATH/bin
   ~/.local/bin
   ~/.tfenv/bin

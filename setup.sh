@@ -67,9 +67,12 @@ sh ./stow.sh
 # -- Arch Installs --
 if type pacman &> /dev/null; then
     # install packages
-    sudo pacman -S --noconfirm - < ./packages/arch/pacman-pkglist.txt
+    sudo pacman -S --needed --noconfirm - < ./packages/arch/pacman-pkglist.txt
     # install AUR packages
-    yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
+    yay -S --needed --noconfirm - < ./packages/arch/aur-pkglist.txt
+
+    # Sops doesn't like to be reinstalled multiples times without causing an error
+    yay -S --noconfirm sops
 elif type dnf &> /dev/null; then
     # --- Fedora Install ---
     # fix hostname
