@@ -5,6 +5,7 @@ docker-compose
 firefox
 gestures
 go
+gcc
 htop
 kubectl
 libinput-gestures

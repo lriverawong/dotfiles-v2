@@ -44,8 +44,8 @@ fi
 
 # setup starship
 # spaceship prompt
-zsh -c "git clone https://github.com/denysdovhan/spaceship-prompt.git \"$ZSH_CUSTOM/themes/spaceship-prompt\" && \
-    ln -s \"$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme\" \"$ZSH_CUSTOM/themes/spaceship.zsh-theme\" "
+zsh -c "git clone https://github.com/denysdovhan/spaceship-prompt.git \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt\" && \
+    ln -s \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme\" \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme\" "
 
 # install kubectx
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
@@ -65,12 +65,12 @@ popd
 sh ./stow.sh
 
 # -- Arch Installs --
-if [[ type pacman &> /dev/null ]]; then
+if type pacman &> /dev/null; then
     # install packages
     sudo pacman -S --noconfirm - < ./packages/arch/pacman-pkglist.txt
     # install AUR packages
     yay -S --noconfirm - < ./packages/arch/aur-pkglist.txt
-elif [[ type dnf &> /dev/null ]]; then
+elif type dnf &> /dev/null; then
     # --- Fedora Install ---
     # fix hostname
     sudo hostnamectl set-hostname l-t480-f
@@ -174,9 +174,9 @@ $HOME/.tfenv/bin/tfenv install 0.11.14
 $HOME/.tfenv/bin/tfenv install 0.12.12
 
 # ssh-agent
-systemctl --user daemon-reload
-systemctl --user start ssh-agent.service
-systemctl --user enable ssh-agent.service
+# systemctl --user daemon-reload
+# systemctl --user start ssh-agent.service
+# systemctl --user enable ssh-agent.service
 
 # openvpn-update-systemd-resolved for vpn
 # sudo systemctl enable systemd-resolved.service
