@@ -56,5 +56,6 @@
     "terraform.path": "/home/luis-ecobee/.tfenv/bin/terraform",
     "terraform.lintPath": "/usr/bin/tflint",
     "terraform.telemetry.enabled": false,
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "vscode-icons"
 }

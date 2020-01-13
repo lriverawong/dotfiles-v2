@@ -1,3 +1,4 @@
+base-devel
 chromium
 dnsutils
 docker

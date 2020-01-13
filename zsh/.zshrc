@@ -91,7 +91,7 @@ alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 
 # add direnv
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 
 # default editor
 export EDITOR="nvim"
