@@ -159,8 +159,13 @@ fi
 
 # add user to input group for touchpad gestures
 sudo gpasswd -a $(whoami) input
+echo "$(whoami) added to <input> user group"
 libinput-gestures-setup autostart
 # libinput-gestures-setup start
+
+# add user to docker group
+sudo usermod -aG docker $(whoami)
+echo "$(whoami) added to <docker> user group"
 
 # setup helm
 helm init --client-only
