@@ -6,7 +6,6 @@
     // "go.formatTool": "goformat",
     "go.formatTool": "goimports",
     "go.autocompleteUnimportedPackages": true,
-    "go.useLanguageServer": true,
     "[go]": {
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
@@ -14,16 +13,22 @@
             "source.organizeImports": true,
         }
     },
-    "gopls": {
-        "usePlaceholders": true, // add parameter placeholders when completing a function
-
-        // Experimental settings
-        "completeUnimported": true, // autocomplete unimported packages
-        "watchFileChanges": true,  // watch file changes outside of the editor
-        "deepCompletion": true,     // enable deep completion
+    "go.languageServerExperimentalFeatures": {
+        "format": true,
+        "autoComplete": true,
+        "rename": true,
+        "goToDefinition": true,
+        "hover": true,
+        "signatureHelp": true,
+        "goToTypeDefinition": true,
+        "goToImplementation": true,
+        "documentSymbols": true,
+        "workspaceSymbols": true,
+        "findReferences": true
     },
+    "go.useLanguageServer": true,
     "files.eol": "\n", // formatting only supports LF line endings
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Panda Syntax",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
@@ -37,6 +42,7 @@
         "<C-c>": false,
         "<C-x>": false,
         "<C-v>": false,
+        "<C-o>": false,
     },
     "terraform.indexing": {
         "enabled": false,
@@ -57,5 +63,6 @@
     "terraform.lintPath": "/usr/bin/tflint",
     "terraform.telemetry.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false
 }

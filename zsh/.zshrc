@@ -8,12 +8,16 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="devops-zsh/senpai-long"
 ZSH_THEME="spaceship"
 
+# NVM Specific rules
+export NVM_LAZY_LOAD=true
+export NVM_DIR="/storage/luis-ecobee/.nvm"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt zsh-syntax-highlighting history-substring-search docker helm)
+plugins=(git git-prompt zsh-syntax-highlighting history-substring-search docker helm zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
