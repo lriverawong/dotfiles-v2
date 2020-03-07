@@ -5,6 +5,7 @@ keybase-bin
 kube-ps1
 navi
 neovim-gtk
+nerd-fonts-complete
 nordvpn
 openvpn-update-systemd-resolved
 plasma5-applets-redshift-control

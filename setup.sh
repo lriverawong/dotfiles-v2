@@ -39,13 +39,15 @@ if [ ! -d ~/.oh-my-zsh ]; then
     # link
     # ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
     # ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
-    
+
+    # power10k zsh theme
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
 
 # setup starship
 # spaceship prompt
-zsh -c "git clone https://github.com/denysdovhan/spaceship-prompt.git \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt\" && \
-    ln -s \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme\" \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme\" "
+# zsh -c "git clone https://github.com/denysdovhan/spaceship-prompt.git \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt\" && \
+#    ln -s \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme\" \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme\" "
 
 # install kubectx
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx

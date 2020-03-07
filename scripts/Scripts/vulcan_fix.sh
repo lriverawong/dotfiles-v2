@@ -14,7 +14,7 @@ if [ -z $interface ]; then
 	interface="wlan0"
 fi
 
-output=$(sudo iwlist $interface scan 2>&1)
+output=$(sudo iw $interface scan 2>&1)
 
 # Get the number of lines of output
 nl=$(echo -n "$output" | grep -c '^')
@@ -43,6 +43,7 @@ while IFS= read -r line; do
     [[ "$line" =~ ESSID ]] && {
         essid=${line##*ID:\"}
 		essid="${essid%\"}"
+    echo $essid
 		# Add to the arrays after ESSID
 		if [ "$essid" = "$ssid" ]; then
 			network_quality[$num_networks]=$qual
