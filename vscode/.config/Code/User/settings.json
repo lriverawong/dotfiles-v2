@@ -64,5 +64,8 @@
     "terraform.telemetry.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.linux": "/home/luis-ecobee/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    }
 }
