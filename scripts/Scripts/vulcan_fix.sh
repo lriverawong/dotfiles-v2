@@ -14,7 +14,7 @@ if [ -z $interface ]; then
 	interface="wlan0"
 fi
 
-output=$(sudo iw $interface scan 2>&1)
+output=$(sudo iwlist $interface scan 2>&1)
 
 # Get the number of lines of output
 nl=$(echo -n "$output" | grep -c '^')
