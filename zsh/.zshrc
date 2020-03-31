@@ -18,7 +18,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # NVM Specific rules
 export NVM_LAZY_LOAD=true
-export NVM_DIR="/storage/luis-ecobee/.nvm"
+export NVM_DIR="/storage/.nvm"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -45,13 +45,9 @@ source /opt/google-cloud-sdk/completion.zsh.inc
 
 # add pure-zsh async functions and custom_completions to fpath
 fpath=(
-  # "$HOME/.zfunctions"
   ~/.oh-my-zsh/custom_completions
   $fpath
 )
-
-# kubectl
-source <(kubectl completion zsh)
 
 #go
 export GOPATH=$HOME/go
@@ -64,9 +60,7 @@ path=(
   # ~/opt/JetBrains Rider-2019.3.1/bin
   $GOPATH/bin
   ~/.local/bin
-  ~/.tfenv/bin
   /snap/bin/
-  ${KREW_ROOT:-$HOME/.krew}/bin
   $path
 )
 
@@ -85,16 +79,6 @@ path=(
 autoload -Uz compinit compdef
 compinit
 
-# Add terraform autocomplete
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /home/luis-ecobee/.tfenv/bin/terraform terraform
-
-# helm aliases
-alias hh="helm tiller run -- helm"
-alias hr="helm tiller run --"
-alias ht="helm tiller start"
-alias hts="helm tiller stop"
-
 # docker aliases
 alias dc="docker-compose"
 alias dcd="docker-compose down"
@@ -102,8 +86,6 @@ alias dcb="docker-compose build"
 alias dcu="docker-compose up"
 alias dcud="docker-compose up -d"
 
-# add direnv
-# eval "$(direnv hook zsh)"
 
 # default editor
 export EDITOR="nvim"
@@ -113,10 +95,6 @@ export EDITOR="nvim"
 
 # command correction
 eval $(thefuck --alias)
-
-alias cwe="./cw-docker.sh exec"
-
-alias dce="docker-compose exec"
 
 # VTE
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then

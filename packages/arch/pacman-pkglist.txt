@@ -8,7 +8,6 @@ gestures
 go
 gcc
 htop
-kubectl
 libinput-gestures
 mlocate
 neovim

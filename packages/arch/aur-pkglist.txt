@@ -1,9 +1,6 @@
 otf-fira-code
 google-chrome
 google-cloud-sdk
-keybase-bin
-kube-ps1
-navi
 neovim-gtk
 nerd-fonts-complete
 nordvpn
@@ -14,5 +11,4 @@ simplenote
 slack-desktop
 spotify
 teams
-tflint
 visual-studio-code-bin

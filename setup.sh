@@ -26,42 +26,14 @@ if [ ! -d ~/.oh-my-zsh ]; then
     # zsh history substring search
     git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
     
-    # --- custom themes ---
-    # -- pure zsh theme --
-    # git clone https://github.com/sindresorhus/pure.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/pure
-    
-
-    # check for existence of zfunctions directory
-    # if [ ! -d ~/.zfunctions ]; then
-    #     mkdir ~/.zfunctions
-    # fi
-
-    # link
-    # ln -s "$HOME/.oh-my-zsh/custom/themes/pure/pure.zsh" "$HOME/.zfunctions/prompt_pure_setup"
-    # ln -s "$HOME/.oh-my-zsh/custom/themes/pure/async.zsh" "$HOME/.zfunctions/async"
-
     # power10k zsh theme
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+    
+    # zsh-nvm
+	git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+
 fi
 
-# setup starship
-# spaceship prompt
-# zsh -c "git clone https://github.com/denysdovhan/spaceship-prompt.git \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt\" && \
-#    ln -s \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-theme\" \"${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme\" "
-
-# install kubectx
-sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
-sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
-
-# install helm
-pushd /tmp
-  sudo wget https://get.helm.sh/helm-v2.15.2-linux-amd64.tar.gz -P /tmp/
-  sudo tar xvfz /tmp/helm-v2.15.2-linux-amd64.tar.gz
-  sudo mkdir -p /opt/helm
-  sudo mv /tmp/linux-amd64/helm /opt/helm
-  sudo ln -sf /opt/helm/helm /usr/local/bin/helm
-popd
 
 # run stow setup
 sh ./stow.sh
@@ -71,7 +43,7 @@ if type pacman &> /dev/null; then
     # install packages
     sudo pacman -S --needed --noconfirm - < ./packages/arch/pacman-pkglist.txt
     # install AUR packages
-    yay -S --needed --noconfirm - < ./packages/arch/aur-pkglist.txt
+    yay -S --needed - < ./packages/arch/aur-pkglist.txt
 
     # Sops doesn't like to be reinstalled multiples times without causing an error
     yay -S --noconfirm sops
@@ -187,21 +159,8 @@ libinput-gestures-setup autostart
 sudo usermod -aG docker $(whoami)
 echo "$(whoami) added to <docker> user group"
 
-# setup helm
-helm init --client-only
-helm plugin install https://github.com/rimusz/helm-tiller
-# needs sops installed from AUR
-helm plugin install https://github.com/futuresimple/helm-secrets
-helm plugin install https://github.com/hayorov/helm-gcs
 
-# tfenv -> terraform 11 and 12
-if [[ ! -d ~/.tfenv ]]; then
-    git clone https://github.com/tfutils/tfenv.git $HOME/.tfenv
-fi
-$HOME/.tfenv/bin/tfenv install 0.11.14
-$HOME/.tfenv/bin/tfenv install 0.12.12
-
-# ssh-agent
+# ssh-agent - KDE only
 # systemctl --user daemon-reload
 # systemctl --user start ssh-agent.service
 # systemctl --user enable ssh-agent.service

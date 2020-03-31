@@ -1,7 +1,7 @@
 #!/bin/bash
 # set -x
 
-storage_home_path="/storage/luis-ecobee/"
+storage_home_path="/storage/"
 
 echo "--- Starting to link $storage_home_path to $HOME ---"
 
