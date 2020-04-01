@@ -28,7 +28,7 @@
     },
     "go.useLanguageServer": true,
     "files.eol": "\n", // formatting only supports LF line endings
-    "workbench.colorTheme": "Panda Syntax",
+    "workbench.colorTheme": "Palenight Theme",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
@@ -67,5 +67,8 @@
     "explorer.confirmDragAndDrop": false,
     "vs-kubernetes": {
         "vs-kubernetes.minikube-path.linux": "/home/luis-ecobee/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     }
 }
