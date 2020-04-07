@@ -28,7 +28,7 @@
     },
     "go.useLanguageServer": true,
     "files.eol": "\n", // formatting only supports LF line endings
-    "workbench.colorTheme": "Palenight Theme",
+    "workbench.colorTheme": "Panda Syntax",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {

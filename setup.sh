@@ -45,9 +45,6 @@ if type pacman &> /dev/null; then
     # install AUR packages
     yay -S --needed - < ./packages/arch/aur-pkglist.txt
 
-    # Sops doesn't like to be reinstalled multiples times without causing an error
-    yay -S --noconfirm sops
-
     # manual install of gestures - temporary removal
     # https://gitlab.com/cunidev/gestures
     # sudo git clone https://gitlab.com/cunidev/gestures /opt/gestures/
