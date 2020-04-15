@@ -158,9 +158,9 @@ echo "$(whoami) added to <docker> user group"
 
 
 # ssh-agent - KDE only
-# systemctl --user daemon-reload
-# systemctl --user start ssh-agent.service
-# systemctl --user enable ssh-agent.service
+systemctl --user daemon-reload
+systemctl --user start ssh-agent.service
+systemctl --user enable ssh-agent.service
 
 # openvpn-update-systemd-resolved for vpn
 # sudo systemctl enable systemd-resolved.service

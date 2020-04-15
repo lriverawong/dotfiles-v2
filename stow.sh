@@ -14,9 +14,9 @@ stow -v libinput-gestures
 stow -v neovim
 stow -v ranger
 stow -v scripts
-# stow -v ssh-agent
-# stow -v ssh-add
-# stow -v ssh-askpass
+stow -v ssh-agent
+stow -v ssh-add
+stow -v ssh-askpass
 stow -v tmux
 stow -v vscode
 stow -v vim
