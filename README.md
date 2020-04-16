@@ -4,25 +4,12 @@ Manjaro KDE
 
 ## Dependencies
 - stow
-- fzf
-- feh
-- rofi/dmenu
-- playerctl
-- i3-gaps
-- exuberant-ctags
-- xcape
+- git
+- zsh
+- unzip
 
 ## Dotfiles
-All files are relative to home
-
-- ~/.config/nvim/
-- zsh config
-- i3 config
-- compton config
-- plasma workspace for i3 wm replacement
-- .profile
-- base vimrc
-- remap script for caps lock to escape key (in i3 config but actual script in ~/Scripts linked to ~/bin)
+All files are relative to home using `stow`.
 
 ## Insert dotfiles
 `sh stow.sh`
@@ -63,37 +50,11 @@ yay -S - < packages/arch/aur-pkglist.txt
   sudo mkinitcpio -p linux<kernelversion>
   ```
  ## Todo
- - `gcloud init` and project setup
- - tfenv setup
 - copy KDE/Plasma settings into part of the config
     - creating a backup of the local configs for kde
     - linking through stow? the configs for kde/plasma
-- gopass config
 - global emoji font support (KDE)
 - `libinput-gestures-setup autostart`
-
-## Work VPN Access
-- need the following package [openvpn-update-systemd-resolved](https://github.com/jonathanio/update-systemd-resolved)
-```
-yay -S openvpn-update-systemd-resolved
-sudo systemctl enable systemd-resolved.service
-sudo systemctl start systemd-resolved.service
-```
-
-Update your work vpn configuration file to include the following, replacing as needed
-```
-script-security 2
-setenv PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-up /etc/openvpn/scripts/update-systemd-resolved
-up-restart
-down /etc/openvpn/scripts/update-systemd-resolved
-down-pre
-```
-
-Start the vpn connection using the command line or the script in `scripts/*`
-```
-sudo openvpn --config ~/.vpn/<work>.ovpn --auth-retry interact --auth-user-pass
-```
 
 ## Fonts
 - follow the [guide](https://www.reddit.com/r/archlinux/comments/9q8dlj/how_to_better_enable_color_emojis/)
