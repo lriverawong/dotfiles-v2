@@ -28,7 +28,7 @@
     },
     "go.useLanguageServer": true,
     "files.eol": "\n", // formatting only supports LF line endings
-    "workbench.colorTheme": "Panda Syntax",
+    "workbench.colorTheme": "GitHub Dark",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.handleKeys": {
@@ -59,15 +59,10 @@
     },
     "editor.fontLigatures": true,
     "terminal.external.linuxExec": "konsole",
-    "terraform.path": "/home/luis-ecobee/.tfenv/bin/terraform",
-    "terraform.lintPath": "/usr/bin/tflint",
-    "terraform.telemetry.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
-    "vs-kubernetes": {
-        "vs-kubernetes.minikube-path.linux": "/home/luis-ecobee/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-    },
+    "python.linting.pylintArgs": ["--generate-members"],
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     }

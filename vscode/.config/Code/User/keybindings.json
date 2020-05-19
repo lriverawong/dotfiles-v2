@@ -23,5 +23,13 @@
     { "key": "ctrl+up",          "command": "workbench.action.terminal.scrollToPreviousCommand", "when": "terminalFocus" },
     { "key": "ctrl+down",        "command": "workbench.action.terminal.scrollToNextCommand", "when": "terminalFocus" },
     { "key": "ctrl+shift+up",    "command": "workbench.action.terminal.selectToPreviousCommand", "when": "terminalFocus" },
-    { "key": "ctrl+shift+down",  "command": "workbench.action.terminal.selectToNextCommand", "when": "terminalFocus" },
+    {
+        "key": "ctrl+shift+down",
+        "command": "workbench.action.terminal.selectToNextCommand",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "python.execInTerminal"
+    },
 ]
